@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Women</title>
+</head>
+<body>
+    <div class="wrapper">
+    </div>
+
+    <script>var sql = require('mssql');
+
+    sql.connect("mssql://username:password@localhost/database").then(function() {
+        // Query
+
+        new sql.Request().query('select * from Blog').then(function(recordset) {
+            console.dir(recordset);
+        }).catch(function(err) {
+            // ... query error checks
+        });
+
+        // ES6 Tagged template literals (experimental)
+
+        sql.query`select * from Blog where id = ${value}`.then(function(recordset) {
+            console.dir(recordset);
+        }).catch(function(err) {
+            // ... query error checks
+        });
+    }).catch(function(err) {
+        // ... connect error checks
+    });</script>
+</body>
+</html>

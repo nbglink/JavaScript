@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShowMOreText</title>
+</head>
+<body>
+Welcome to the "Show More Text Example".<a href="#" id="more" onclick="showText()">Read more...</a>
+
+<span id="text" style="display:none">Welcome to ... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at,
+    consequuntur fuga harum incidunt omnis repudiandae saepe veritatis. Aliquid aperiam assumenda culpa dolore ea error
+    eum impedit iure reiciendis sunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi debitis
+    deleniti, exercitationem explicabo illum itaque, necessitatibus nemo nisi nobis pariatur praesentium quas reprehenderit sapiente sequi tenetur voluptate. Dolor, maiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid debitis dolor id illo neque quasi, ratione soluta ut vitae. Ducimus, esse facilis fuga illum maiores nesciunt nihil optio tenetur?</span>
+
+<script>
+    function showText() {
+        document.getElementById('text')
+                .style.display = 'inline';
+        document.getElementById('more')
+                .style.display = 'none';
+    }
+</script>
+</body>
+</html>
