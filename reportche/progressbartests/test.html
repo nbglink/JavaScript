@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['timeline']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var container = document.getElementById('timeline');
+            var chart = new google.visualization.Timeline(container);
+            var dataTable = new google.visualization.DataTable();
+
+            dataTable.addColumn({ type: 'string', id: 'Plan' });
+            dataTable.addColumn({ type: 'string', id: 'planName' });
+            dataTable.addColumn({ type: 'date', id: 'Start' });
+            dataTable.addColumn({ type: 'date', id: 'End' });
+
+            dataTable.addRows([
+                [ 'Scheduled', 'Scheduled', new Date("2015-07-22T12:00:00.000Z"), new Date("2015-07-22T13:25:00.000Z") ],
+                [ 'Scheduled', 'Scheduled',        new Date("2015-07-22T09:00:00.000Z"),  new Date("2015-07-22T10:00:00.000Z") ],
+                [ 'New', 'New',  new Date("2015-07-22T08:00:00.000Z"),  new Date("2015-07-22T13:05:00.000Z") ],
+                [ 'Emergency', 'Emergency',  new Date("2015-07-22T11:00:00.000Z"),  new Date("2015-07-22T13:30:00.000Z") ]
+            ]);
+
+            var options = {
+                timeline: {colorByRowLabel: true, groupByRowLabel: false,  showRowLabels: false },
+                colors: ['blue', 'green', 'red'],
+            };
+
+            chart.draw(dataTable, options);
+        }
+    </script>
+</head>
+<body>
+<div id="timeline" style="height: 220px; width:70%;" ></div>
+</body>
+</html>

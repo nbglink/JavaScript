@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <style>
+        #menu {
+            background: #DDD;
+            text-align: center;
+            padding: 5px;
+            line-height: 1.5;
+            border-radius: 3px;
+            overflow: auto;
+        }
+
+        #menu>#loggedInUser {
+            float: right;
+            margin-right: 10px;
+        }
+
+        #menu a {
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        #menu a:hover {
+            background: #BBB;
+        }
+
+        main > section {
+            display: block;
+            padding: 20px 10px;
+
+        }
+
+        section h1 {
+            margin: 10px 0px;
+            font-size: 1.2em;
+        }
+
+        table th {
+            background: #DDD;
+            padding: 10px;
+        }
+
+        table td {
+            /*padding: 5px 10px;*/
+            padding-left: 10px;
+            background: #EEE;
+            border: 1px solid black;
+        }
+
+        #infoBox, #errorBox, #loadingBox {
+            width: 80%;
+            margin: 10px auto;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            border-radius: 3px;
+            display: none;
+        }
+
+        #loadingBox {
+            background: #7CB3E9;
+        }
+        #infoBox {
+            background: #393;
+        }
+        #errorBox {
+            background: #F50;
+        }
+
+        footer {
+            background: #DDD;
+            padding: 5px 10px;
+            font-size: 0.8em;
+            text-align: center;
+            border-radius: 3px;
+        }
+
+        #timeline {
+            margin-top: 58px;
+        }
+
+        .col-lg-5 {
+            padding-left: 0;
+            margin-left: -15px;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="reportche.js"></script>
+    <script src="jquery-3.1.1.min.js"></script>
+
+
+</head>
+<body onload = "startApp()">
+
+<header id="menu">
+    <a href="#" id="linkListTaks">List Tasks</a>
+</header>
+
+<section id="loadingBox">Loading ...</section>
+
+<section id="infoBox">Info</section>
+
+<section id="errorBox">Error</section>
+
+<main>
+
+<section id="viewTasks" class="row">
+    <h1>Tasks</h1>
+    <div id="tasks" class="col-lg-6">
+        <table >
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Task title</td>
+                <td>Task author</td>
+                <td>Task description</td>
+            </tr>
+            <tr>
+                <td>Task title</td>
+                <td>Task author</td>
+                <td>Task description</td>
+            </tr>
+            <tr>
+                <td>Task title</td>
+                <td>Task author</td>
+                <td>Task description</td>
+            </tr>
+
+        </table>
+    </div >
+
+    <div id = "timeline" class="col-lg-5">
+    </div>
+
+
+</section>
+</main>
+<footer>WhiteBoard - Simple SPA Application</footer>
+
+</body>
+</html>
